@@ -6,7 +6,7 @@
 
 body
 {
-
+    scroll-behavior: smooth;
 }
 
 
@@ -67,36 +67,84 @@ nav ul li a
     
 }
 
-/* forma do logowania */
-/*
-#login-form
-{
-    background-color: #7878784b;
-    width: 50%;
-    padding: 1em;
-    font-family: Helvetica;
-    text-align: center;
-    border-radius: 10px;
-    margin-inline: auto;
-    position: relative;
-    z-index: 2;
-    margin-top: 30%;
-}
-
-#Zaloguj-btn
-{
-    text-decoration: none;
-    color: #000000;
-    font-family: Helvetica;
-}
-
-#Zaloguj-btn a 
-{
-    margin-top: 1em;
-}*/
 
 #login_logo svg
 {
     text-decoration: none;
     color: black;
 }
+
+#oferta
+{
+    height: 100vh;
+    width: 100%;
+    flex-wrap: wrap;
+}
+
+.section
+{
+    height: 100vh;
+}
+
+#oferta #pozycje
+{
+    width: 90%;
+    height: 50%;
+    margin-inline: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+#oferta #pozycje .pozycja
+{
+    background: rgba(255,255,255, 0.2);
+    background: linear-gradient(180deg, rgba(255,255,255,0.2) 0%, rgba(0,0,0,0.2) 100%);
+    
+    border: 2px solid black;
+    border-radius: 10px;
+
+    box-shadow: 0 0 84px 2px rgba(0, 0, 0, 0.25);
+    width: 30%;
+    height:80%;
+
+    font-family: Helvetica;
+    text-align: center;
+}
+
+.pozycja h2
+{
+    margin-top: 2em;
+}
+
+.pozycja a
+{
+    text-decoration: none;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    position: relative;
+    top: 50%;
+    width: fit-content;
+    margin-inline: auto;
+    background-color: rgba(123, 117, 117, 0.3);
+    border-radius: 8px;
+}
+
+.pozycja a p
+{
+    font-weight: bold;
+    text-decoration: none;
+    background: linear-gradient(90deg, #8B8B8B 0%, #000000 75%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    width: fit-content;
+    border: 2px solid black;
+    padding: 4px;
+    border-radius: 8px;
+}   

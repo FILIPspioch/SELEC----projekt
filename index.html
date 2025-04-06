@@ -12,7 +12,7 @@
         <h2>Selec</h2>
 
         <ul>
-            <li><a href="#">Oferta</a></li>
+            <li><a href="#oferta">Oferta</a></li>
             <li><a href="#">Historia</a></li>
         </ul>
 
@@ -28,7 +28,28 @@
         <section class="section">
         <h1 id="main_text">SELEC</h1>
         </section>
-        <section class="section "></section>
+        <section class="section" id="oferta">
+            <div id="pozycje">
+                <div id="InfoSkaner" class="pozycja">
+                    <h2>InfoSkaner</h2>
+                    <a href="#">
+                        <p>Skorzystaj</p>
+                    </a>
+                </div>
+                <div id="MocnyKlucz" class="pozycja">
+                    <h2>MocnyKlucz</h2>
+                    <a href="#">
+                        <p>Skorzystaj</p>
+                    </a>
+                </div>
+                <div id="Oferta Dla firm" class="pozycja">
+                    <h2>Oferta  dla firm</h2>
+                    <a href="#">
+                        <p>Skorzystaj</p>
+                    </a>
+                </div>
+            </div>
+        </section>
     </main>
     <footer></footer>
 
@@ -46,6 +67,9 @@
 
         const navItems = document.querySelectorAll("nav ul li");
         const logo_text = document.querySelector("nav h2");
+
+        const o_div = document.querySelector("#oferta");
+
 
         let t1 = gsap.timeline();
 
@@ -78,7 +102,17 @@
                 //tu rotacja w xy żeby z myszka dzialalo 
             });
             */
-        })
+
+            
+        });
+
+        gsap.fromTo(text,
+         {opacity: 1}, 
+         {opacity: 1, letterSpacing: 30, y: "+=500", ease: "power4.Out", duration: 1.5, scrollTrigger: {trigger: nav, start: "nav", end: "o_div center"}  });
+
+         gsap.fromTo(o_div, {opacity: 0}, {opacity: 1, duration: 2, scrollTrigger: {trigger: o_div, start: "o_div center", end: "o_div 80%"}})
+
+        
 
 
     </script>

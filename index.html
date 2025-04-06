@@ -25,7 +25,10 @@
         
     </nav>
     <main>
+        <section class="section">
         <h1 id="main_text">SELEC</h1>
+        </section>
+        <section class="section "></section>
     </main>
     <footer></footer>
 
@@ -35,6 +38,7 @@
     <!--GSAP-->
     <script src="./JS/gsap.min.js"></script>
     <script src="./JS/ScrollTrigger.min.js"></script>
+    <!-- tu jest GSAP -->   
     <script>
 
         const nav = document.querySelector("nav");
@@ -68,6 +72,12 @@
             logo_text.addEventListener("mouseleave", ()=> {
                 gsap.to(logo_text, {letterSpacing: 10, duration: 1});
             });
+
+            /*
+            text.addEventListener("mouseover", (e)=> {
+                //tu rotacja w xy żeby z myszka dzialalo 
+            });
+            */
         })
 
 

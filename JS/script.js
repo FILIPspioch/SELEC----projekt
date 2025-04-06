@@ -11,15 +11,7 @@ profil_icon.addEventListener("click", () => {
 
 //funckje
 function displayLogin() {
-  viewport.innerHTML += `<div id="login-form">
-    <h2>Login</h2>
-    <form>
-        <input type="text" name="login" placeholder="Login"><br>
-        <input type="password" name="password" placeholder="Hasło"><br>
-        <button id="Zaloguj-btn"> Zaloguj Się </button>
-    </form> 
-  </div>`;
-
+  /*
   let formSubmitButton = document.querySelector("#login-form #Zaloguj-btn");
 
   let form = document.querySelector("#login-form");
@@ -34,6 +26,10 @@ function displayLogin() {
       form.querySelector("h2").innerHTML = "Zalogowano";
     }
 
-    //document.querySelector("#login-form").style.display = "none";
-  });
+    function hideLogin() {
+      document.querySelector("#login-form").style.display = "none";
+    }
+
+    setTimeout(hideLogin, 3000);
+  });*/
 }

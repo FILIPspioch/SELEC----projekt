@@ -65,6 +65,7 @@ nav ul li a
 }
 
 /* forma do logowania */
+/*
 #login-form
 {
     background-color: #7878784b;
@@ -77,4 +78,22 @@ nav ul li a
     position: relative;
     z-index: 2;
     margin-top: 30%;
+}
+
+#Zaloguj-btn
+{
+    text-decoration: none;
+    color: #000000;
+    font-family: Helvetica;
+}
+
+#Zaloguj-btn a 
+{
+    margin-top: 1em;
+}*/
+
+#login_logo svg
+{
+    text-decoration: none;
+    color: black;
 }

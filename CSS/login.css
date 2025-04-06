@@ -1,0 +1,61 @@
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Helvetica;
+}
+
+body
+{
+    background-color: rgb(255, 255, 255);
+}
+
+#login-form
+{
+    width: 50%;
+    margin-inline: auto;
+    background-color: rgba(0, 0, 0, 0.199);
+    text-align: center;
+    padding: 1em;
+    border-radius: 10px;
+    margin-top: 50%;
+}
+
+#login-form h2 
+{
+    padding: 0.5em;
+}
+
+#inputs 
+{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+}
+
+
+input[name="login"], input[name="password"]
+{
+    width: 50%;
+    margin-inline: auto;
+    border: 1px solid black;
+    border-radius: 2px;
+    padding: 5px;
+}
+
+button[type="submit"]
+{
+    padding: 5px;
+    border: 2px solid black;
+    border-radius: 7px;
+    transition: border-radius .6s cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+button[type="submit"]:hover
+{
+    border-radius: 0;
+}
+
+
+

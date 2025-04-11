@@ -176,6 +176,7 @@ nav ul li a
 {
     width: 100%;
     height: fit-content;
+    height: 40vh;
     display: flex;
     background-color: #5E6E7E;
 }  

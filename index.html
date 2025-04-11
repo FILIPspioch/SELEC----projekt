@@ -28,30 +28,57 @@
         <section class="section">
         <h1 id="main_text">SELEC</h1>
         </section>
-        <section class="section" id="oferta">
-            <div id="pozycje">
-                <div id="InfoSkaner" class="pozycja">
-                    <h2>InfoSkaner</h2>
-                    <a href="#">
-                        <p>Skorzystaj</p>
-                    </a>
+        <section class="section oferta_section" id="oferta">
+            <section id="silne_hasla">
+                <div class="lewo">
+                <h2>Silne Hasła</h2>
+                <p>Pomożemy ci zabezpieczyć twoje konta generując silne hasła.</p>
                 </div>
-                <div id="MocnyKlucz" class="pozycja">
-                    <h2>MocnyKlucz</h2>
-                    <a href="#">
-                        <p>Skorzystaj</p>
-                    </a>
+
+                <img src="./media/MocnyKlucz.png" alt="">
+            </section>
+
+            <section id="info_skaner" >
+
+                <img src="./media/InfoSkaner.png" alt="">
+
+                <div class="prawo">
+                    <h2>Info skaner</h2>
+                    <p>Zadbamy o twoje dane osobowe w internecie. Przeszukamy internet aby znaleźć wszystkie informacje o tobie i skutecznie usuniemy je z miejsc w których nie chcesz aby znajdowały.</p>
                 </div>
-                <div id="Oferta Dla firm" class="pozycja">
-                    <h2>Oferta  dla firm</h2>
-                    <a href="#">
-                        <p>Skorzystaj</p>
-                    </a>
+                
+            </section>
+
+            <section id="biznes">
+                <div class="lewo">
+                    <h2>Oferta dla biznesu</h2>
+                    <p>Jest to pakiet dla firm. W którym jest pełna ochrona twojego biznesu. Oraz indywidualne konsultacje z naszymi wyszkolonymi pracownikami.</p>
                 </div>
-            </div>
+
+                <img src="https://3lions.pl/wp-content/uploads/2024/02/Blog-Mental-Expert-5.jpg" alt="">
+
+            </section>
         </section>
     </main>
-    <footer></footer>
+    <footer>
+        <div id="lewo_f">
+            <h3>SELEC</h1>
+        </div>
+
+        <div id="site_nav">
+            <ul>
+                <li>Home</li>
+                <li>Oferta</li>
+                <li>Historia</li>
+            </ul>
+        </div>
+
+        <div id="contact">
+            <h2>Kontakt</h2>
+            <a href="mailto:nic@gmail.com">Mail</a>
+        </div>
+
+    </footer>
 
     <!--Skrypty-->
     <script src="./JS/script.js" type="module"></script>
@@ -68,11 +95,10 @@
         const navItems = document.querySelectorAll("nav ul li");
         const logo_text = document.querySelector("nav h2");
 
-        const o_div = document.querySelector("#oferta");
 
 
         let t1 = gsap.timeline();
-        let t2 = gsap.timeline({scrollTrigger: {trigger: o_div, start: "o_div center", end: "o_div 80%"}});
+        let t2 = gsap.timeline({scrollTrigger: {trigger: , start: "", end: ""}});
 
         document.addEventListener("DOMContentLoaded", ()=>{
             t1.fromTo(nav, {opacity: 0}, {opacity: 1, duration: 1});

@@ -94,7 +94,8 @@ nav ul li a
 #oferta{
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
+    justify-content: space-between;
+    gap: 10%;
 }
 
 #silne_hasla
@@ -208,6 +209,11 @@ nav ul li a
 #biznes img 
 {
     width: 50%;
+}
+
+#margin
+{
+    margin: 33em;
 }
 
 

@@ -28,6 +28,7 @@
         <section class="section">
         <h1 id="main_text">SELEC</h1>
         </section>
+
         <section class="section oferta_section" id="oferta">
             <section id="silne_hasla">
                 <div class="lewo">
@@ -48,7 +49,6 @@
                 </div>
                 
             </section>
-
             <section id="biznes">
                 <div class="lewo">
                     <h2>Oferta dla biznesu</h2>
@@ -60,6 +60,7 @@
             </section>
         </section>
     </main>
+    <!--
     <footer>
         <div id="lewo_f">
             <h3>SELEC</h1>
@@ -79,6 +80,7 @@
         </div>
 
     </footer>
+    -->
 
     <!--Skrypty-->
     <script src="./JS/script.js" type="module"></script>
@@ -89,61 +91,23 @@
     <!-- tu jest GSAP -->   
     <script>
 
-        const nav = document.querySelector("nav");
-        const text = document.querySelector("main #main_text");
 
-        const navItems = document.querySelectorAll("nav ul li");
-        const logo_text = document.querySelector("nav h2");
+        //to za pomoca chata 
 
+        // Rejestracja wtyczki ScrollTrigger
+    gsap.registerPlugin(ScrollTrigger);
 
-
-        let t1 = gsap.timeline();
-        //let t2 = gsap.timeline({scrollTrigger: {trigger: , start: "", end: ""}});
-
-        document.addEventListener("DOMContentLoaded", ()=>{
-            t1.fromTo(nav, {opacity: 0}, {opacity: 1, duration: 1});
-            t1.fromTo(text, {opacity: 0, letterSpacing: 0}, {opacity: 1, letterSpacing: 30, ease: "power4.Out", duration: 1.5});
-
-
-
-            for(let a of navItems)
-            {
-                a.addEventListener("mouseover", () => {
-                    gsap.fromTo(a, {scale: 1}, {scale: 1.1, duration: .5, ease: "back.inOut(1.7)"});
-                });
-                a.addEventListener("mouseleave", () => {
-                    gsap.fromTo(a, {scale: 1.1}, {scale: 1, duration: .5, ease: "back.inOut(1.7)"});
-                } )
-            }
-
-
-            logo_text.addEventListener("mouseover", () => {
-                gsap.to(logo_text, {letterSpacing: 0, duration: 1});
-            });
-            logo_text.addEventListener("mouseleave", ()=> {
-                gsap.to(logo_text, {letterSpacing: 10, duration: 1});
-            });
-
-            /*
-            text.addEventListener("mouseover", (e)=> {
-                //tu rotacja w xy żeby z myszka dzialalo 
-            });
-            */
-            
-            
-        });
-
-        gsap.fromTo(text,
-         {opacity: 1}, 
-         {opacity: 1, letterSpacing: 30, y: "+=500", ease: "power4.Out", duration: 1.5, scrollTrigger: {trigger: nav, start: "nav", end: "o_div center"}  });
-
-
-
-         t2.fromTo(o_div, {opacity: 0}, {opacity: 1, duration: 2})
-
-        
-
-
+    // Animacja - przesunięcie elementu o 400 pikseli w dół (y += 400)
+    gsap.to("#main_text", {
+    y: "+=400", letterSpacing: "0px",
+    scrollTrigger: {
+        trigger: "#main_text", // element, który wywołuje animację
+        start: "top 50%",   // animacja zaczyna się, gdy górna krawędź elementu osiągnie 80% wysokości okna
+        end: "bottom 10%",  // animacja kończy się, gdy dolna krawędź elementu osiągnie 20% wysokości okna
+        scrub: true,        // synchronizuje postęp animacji z scrollowaniem
+        //markers: true       // wyświetla znaczniki 
+    }
+    });
     </script>
 
 </body>
